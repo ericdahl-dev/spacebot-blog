@@ -6,10 +6,16 @@ const posts = await getCollection('blog');
 ---
 <BaseLayout title="Home">
   <h1>Spacebot Blog</h1>
-  <ul>
-    {posts.map(post => (
-      <li>
-        <a href={`/blog/${post.slug}/`}>{post.data.title}</a>
+  <p class="intro">A small collection of posts about projects and experiments.</p>
+
+  <ul class="post-list">
+    {posts.sort((a,b)=> new Date(b.data.pubDate) - new Date(a.data.pubDate)).map(post => (
+      <li class="post-item">
+        <a class="post-link" href={`/spacebot-blog/blog/${post.slug}/`}>
+          <h2>{post.data.title}</h2>
+          <p class="meta">{new Date(post.data.pubDate).toLocaleDateString()}</p>
+          {post.data.description && <p class="desc">{post.data.description}</p>}
+        </a>
       </li>
     ))}
   </ul>

@@ -1,36 +1,97 @@
-/* Global styles for Spacebot Blog */
+/* Global styles for Spacebot Blog - redesigned */
 :root{
-  --bg:#ffffff;
-  --text:#111827;
-  --muted:#6b7280;
-  --accent:#2563eb;
+  --bg:#0b0c0f;
+  --text:#e6e6e6;
+  --muted:#a1a1aa;
+  --accent:#4f46e5;
+  --border:#1f2937;
 }
 
 html,body{
   height:100%;
 }
+
 body{
   margin:0;
   font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
   background:var(--bg);
   color:var(--text);
-  line-height:1.6;
-  padding:2rem;
+  line-height:1.7;
+  padding:0;
 }
 
-h1,h2,h3{
-  color:var(--text);
-  margin-top:0;
+/* header */
+.site-header{
+  position:sticky;
+  top:0;
+  background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+  border-bottom:1px solid var(--border);
+  z-index:20;
 }
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0.75rem 1rem;
+}
+.site-title{
+  color:var(--text);
+  font-weight:700;
+  text-decoration:none;
+  font-size:1.1rem;
+}
+.site-nav a{
+  color:var(--muted);
+  margin-left:1rem;
+  text-decoration:none;
+  font-size:0.95rem;
+}
+.site-nav a:hover{ color:var(--text); }
+
+/* centered content container */
+.container{
+  max-width:780px;
+  margin:0 auto;
+  padding:1.5rem;
+}
+
+.site-main{ padding-top:1.25rem; padding-bottom:3rem }
+
+/* typography */
+h1,h2,h3,h4{
+  color:var(--text);
+  margin:0.75rem 0 0.35rem 0;
+  line-height:1.15;
+}
+h1{ font-size:2rem }
+h2{ font-size:1.4rem }
+h3{ font-size:1.15rem }
+h4{ font-size:1rem }
+
+p{ color:var(--text); margin:0 0 1rem 0; }
 
 a{ color:var(--accent); text-decoration:none }
-
 a:hover{ text-decoration:underline }
 
-.container{ max-width:900px; margin:0 auto }
+/* lists */
+ul,ol{ margin:0 0 1rem 1.25rem; color:var(--text) }
+li{ margin:0.35rem 0 }
 
-/* basic article styling */
+/* code */
+code{ font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, 'Roboto Mono', 'Courier New', monospace; background:transparent; color:var(--accent); padding:0.05rem 0.25rem; border-radius:4px }
+pre{ background:#0f1114; padding:1rem; overflow:auto; border-radius:8px; border:1px solid var(--border); color:var(--text) }
+
+/* post list styles */
+.post-list{ list-style:none; padding:0; margin:1rem 0 }
+.post-item{ padding:0.85rem 0; border-bottom:1px solid var(--border) }
+.post-link{ color:inherit; text-decoration:none; display:block }
+.post-link h2{ margin:0; font-size:1.1rem }
+.post-link .meta{ color:var(--muted); font-size:0.9rem; margin:0.25rem 0 }
+.post-link .desc{ color:var(--text); margin:0.25rem 0 0 0 }
+
+/* prose/article */
 article{ margin-top:1rem }
 
-pre{ background:#f3f4f6; padding:1rem; overflow:auto }
-code{ background:#f9fafb; padding:0.15rem 0.3rem; border-radius:4px }
+/* footer */
+.site-footer{ color:var(--muted); font-size:0.9rem; padding:1rem 0; text-align:center }
+

@@ -1,0 +1,40 @@
+Changes made in redesign branch:
+
+1. Updated src/layouts/BaseLayout.astro
+   - Added sticky header with site title and simple nav (Blog, Projects, GitHub).
+   - Centered content container with max-width ~780px.
+   - Footer added.
+
+2. Updated src/styles/global.css
+   - Switched to dark theme colors (#0b0c0f background, #e6e6e6 text, #a1a1aa secondary, #1f2937 borders, #4f46e5 accent).
+   - Typography adjustments (line-height, font stacks), spacing, header and prose styles.
+   - Code block styling and monospace fonts set.
+   - Added post list styles.
+
+3. Updated src/pages/index.astro
+   - Replaced layout with a simple vertical list of posts (title, description, date), removed card/grid complexity.
+   - Added intro paragraph.
+
+4. Added src/pages/blog/index.astro as a simple listing mirror.
+
+Notes:
+- Preserved base path in routes (/spacebot-blog) and left /projects untouched.
+- Could not run npm build/test due to Node not being available in sandbox; CI workflow remains unchanged.
+
+To apply as a branch and PR (commands to run locally):
+
+# create branch
+git checkout -b redesign/base-layout
+
+# add changes
+git add src/layouts/BaseLayout.astro src/styles/global.css src/pages/index.astro src/pages/blog/index.astro CHANGES-redesign.txt
+
+# commit
+git commit -m "Redesign: minimal header, dark theme, centered layout, simple post list"
+
+# push branch
+git push origin redesign/base-layout
+
+# open PR on GitHub from redesign/base-layout -> main
+
+CI will run (npm install + npm test), and auto-merge is enabled upon passing checks.

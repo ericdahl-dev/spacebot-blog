@@ -1,14 +1,31 @@
 ---
+import '../styles/global.css';
 const { title } = Astro.props;
 ---
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
-    <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
-    <slot />
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="site-title" href="/">Spacebot</a>
+        <nav class="site-nav">
+          <a href="/">Blog</a>
+          <a href="/">Projects</a>
+          <a href="https://github.com/">GitHub</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container site-main">
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">© {new Date().getFullYear()} Spacebot</div>
+    </footer>
   </body>
 </html>

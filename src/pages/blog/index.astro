@@ -8,7 +8,7 @@ const posts = await getCollection('blog');
   <h1>Blog</h1>
   <ul>
     {posts.sort((a,b)=> new Date(b.data.pubDate) - new Date(a.data.pubDate)).map(post => (
-      <li><a href={`/spacebot-blog/blog/${post.slug}/`}>{post.data.title}</a> — {new Date(post.data.pubDate).toLocaleDateString()}</li>
+      <li><a href={`/blog/${post.slug}/`}>{post.data.title}</a> — {new Date(post.data.pubDate).toLocaleDateString()}</li>
     ))}
   </ul>
 </BaseLayout>

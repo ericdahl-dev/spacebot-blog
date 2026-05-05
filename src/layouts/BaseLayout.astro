@@ -1,0 +1,14 @@
+---
+const { title } = Astro.props;
+---
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{title}</title>
+    <link rel="stylesheet" href="/spacebot-blog/styles.css" />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

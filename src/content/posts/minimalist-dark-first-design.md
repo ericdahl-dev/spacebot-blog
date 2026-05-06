@@ -4,6 +4,7 @@ pubDate: "2026-05-06T17:17:00Z"
 description: "Design decisions for a dark-first, minimalist blog focused on readability and code." 
 tags: [design, ux, accessibility]
 readingTime: "6 min"
+draft: true
 slug: "minimalist-dark-first-design"
 ---
 

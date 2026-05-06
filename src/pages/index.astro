@@ -11,7 +11,7 @@ const posts = await getCollection('blog');
   <ul class="post-list">
     {posts.sort((a,b)=> new Date(b.data.pubDate) - new Date(a.data.pubDate)).map(post => (
       <li class="post-item">
-        <a class="post-link" href={`/spacebot-blog/blog/${post.slug}/`}>
+        <a class="post-link" href={`/blog/${post.slug}/`}>
           <h2>{post.data.title}</h2>
           <p class="meta">{new Date(post.data.pubDate).toLocaleDateString()}</p>
           {post.data.description && <p class="desc">{post.data.description}</p>}

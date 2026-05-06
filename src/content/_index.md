@@ -6,7 +6,7 @@ tags: [blog, homepage, engineering]
 readingTime: "1 min"
 ---
 
-Tagline: "Ship smaller—iterate faster."
+Tagline: "Ship smaller — iterate faster."
 
 Spacebot Blog is a concise engineering-first collection of notes, case studies, and design decisions for engineers and creators building lightweight, testable web experiences. Expect short technical posts, practical patterns, and the reasoning behind small, high-impact iterations.
 

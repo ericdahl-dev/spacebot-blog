@@ -4,6 +4,7 @@ pubDate: "2026-05-06T17:17:00Z"
 description: "Case study of a focused tiny redesign and the outcomes it unlocked."
 tags: [case-study, design, ux]
 readingTime: "6 min"
+draft: true
 slug: "ship-small-iterate-fast"
 ---
 
